@@ -534,7 +534,7 @@ bool nRF905::airwayBusy(void) {
 }
 
 void nRF905::startTx(const uint32_t retransmit, const Mode nextMode) {
-  // bool update = false;
+  bool update = false;
   if (this->_mode == PowerDown) {
     this->setMode(Idle);
     delay(3);  // Delay is needed to the radio has time to power-up and see the standby/TX pins pulse
