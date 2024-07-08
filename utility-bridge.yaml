@@ -83,7 +83,7 @@ logger:
 # Enable Home Assistant API
 api:
   encryption: 
-    key: 8rg2Rbl3zzp6Y/kdSA0JNMXIBsvFwfqZIQl+gzHvP6c=
+    key: !secret ventilation_api_key
   
   services:
     - service: set_speed
@@ -96,7 +96,7 @@ api:
 
 
 ota:
-  password: "660dc12c5ab64f4685bc015e084f0f6d"
+  password: !secret ota_key
 
 wifi:
   ssid: !secret wifi_ssid
@@ -105,7 +105,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "LOLIN32-Wifi Fallback Hotspot"
-    password: "3kifl6IgNWua"
+    password: !secret wifi_fallback
 
 
 # In combination with the `ap` this allows the user
