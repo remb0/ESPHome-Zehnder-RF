@@ -47,7 +47,7 @@ time:
     timezone: Europe/Amsterdam
 
 external_components:
-  - source: github://cthulu/ESPHome-Zehnder-RF
+  - source: github://remb0/ESPHome-Zehnder-RF
 
 # SPI
 spi:
